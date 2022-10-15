@@ -1,0 +1,7 @@
+!clone/
+clone/*
+!clone/clone-example.sh
+
+!temp/
+temp/*
+!temp/.keep
