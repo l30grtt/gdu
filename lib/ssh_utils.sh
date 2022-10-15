@@ -30,3 +30,10 @@ ssh_agent_add_key() {
 ssh_handshake() {
     ssh -T $1
 }
+
+ssh_generate_keypair() {
+    yes '' | ssh-keygen -t rsa \
+                        -b 4096 \
+                        -C $1 \
+                        -f $2
+}
