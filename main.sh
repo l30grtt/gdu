@@ -15,4 +15,4 @@ mkdir -p $TARGET
 ## Clone and run repositories
 
 ### Example
-./clone/example.sh $TARGET
+./clone/clone-example.sh $TARGET
