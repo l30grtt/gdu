@@ -3,6 +3,6 @@
 ## Usage
 
 ```console
-$ ./main.sh     # clone and run subrepositories
-$ ./clean.sh    # delete repositories
+git clone https://github.com/l30grtt/gdu.git gdu \
+                                          && gdu/main.sh
 ```
