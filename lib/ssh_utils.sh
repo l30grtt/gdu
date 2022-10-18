@@ -1,6 +1,7 @@
 #!/bin/sh
+# DIR_NAME=$(dirname -- "$0")
+DIR_NAME=$(cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)
 imports=( "sig_utils" )
-DIR_NAME=$(dirname -- "$0")
 for import in $imports
 do :
     source "$DIR_NAME/$import.sh"
@@ -32,8 +33,5 @@ ssh_handshake() {
 }
 
 ssh_generate_keypair() {
-    yes '' | ssh-keygen -t rsa \
-                        -b 4096 \
-                        -C $1 \
-                        -f $2
+    yes '' | ssh-keygen -t rsa -b 4096 -C $1 -f $2
 }
